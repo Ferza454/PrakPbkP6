@@ -167,34 +167,114 @@ onMounted(loadTodos);
 
 <style scoped>
 .todo-app {
-  max-width: 400px;
-  margin: auto;
-  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px 25px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
 input[type="text"],
 input[type="checkbox"],
 input {
-  padding: 6px;
-  margin-right: 6px;
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s ease-in-out;
 }
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
 button {
-  padding: 6px 10px;
-  margin-left: 5px;
-  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease-in-out;
 }
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
 }
+
 li {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  background: #ffffff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
+
 li span {
   flex-grow: 1;
-  margin-left: 8px;
-  display: flex;
-  align-items: center;
+  margin-left: 12px;
+  font-size: 1rem;
+  color: #333;
+}
+
+li input[type="text"] {
+  flex-grow: 1;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+li button {
+  margin-left: 6px;
+  font-size: 0.9rem;
+  padding: 8px 10px;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+p[style*="color: red;"] {
+  color: #e74c3c;
+  font-weight: bold;
 }
 </style>
+
+<style>
+body {
+  background-color: #eef2f7;
+  margin: 0;
+  padding: 0;
+}
+</style>
+
